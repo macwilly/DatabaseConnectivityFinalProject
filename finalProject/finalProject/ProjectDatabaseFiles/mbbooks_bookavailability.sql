@@ -1,0 +1,53 @@
+CREATE DATABASE  IF NOT EXISTS `mbbooks` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `mbbooks`;
+-- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
+--
+-- Host: localhost    Database: mbbooks
+-- ------------------------------------------------------
+-- Server version	5.6.13
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `bookavailability`
+--
+
+DROP TABLE IF EXISTS `bookavailability`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `bookavailability` (
+  `isbn` varchar(10) DEFAULT NULL,
+  `num_in_stock` int(11) DEFAULT NULL,
+  `rentable` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `bookavailability`
+--
+
+LOCK TABLES `bookavailability` WRITE;
+/*!40000 ALTER TABLE `bookavailability` DISABLE KEYS */;
+INSERT INTO `bookavailability` VALUES ('781444993',15,'N'),('694003611',2,'Y'),('321934911',20,'N'),('786939532',6,'N'),('1416524525',12,'Y'),('240818180',18,'N'),('399161287',4,'N'),('385349076',16,'N'),('930289234',5,'N'),('805444211',3,'N'),('553593064',5,'N'),('385537859',10,'N'),('375842209',2,'Y'),('968832032',10,'N'),('1591845114',20,'N'),('014242417X',10,'N'),('160320976X',13,'N'),('553593714',8,'Y'),('098589024X',10,'N');
+/*!40000 ALTER TABLE `bookavailability` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2014-05-01 12:38:11
